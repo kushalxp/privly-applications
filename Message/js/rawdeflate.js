@@ -42,13 +42,21 @@ var zip_HASH_BITS = 13;
 // var zip_LIT_BUFSIZE = 0x8000;
 // var zip_HASH_BITS = 15;
 if(zip_LIT_BUFSIZE > zip_INBUFSIZ)
+{
     alert("error: zip_INBUFSIZ is too small");
-if((zip_WSIZE<<1) > (1<<zip_BITS))
-    alert("error: zip_WSIZE is too large");
+}
+	if((zip_WSIZE<<1) > (1<<zip_BITS))
+{    
+	alert("error: zip_WSIZE is too large");
+}
 if(zip_HASH_BITS > zip_BITS-1)
+{
     alert("error: zip_HASH_BITS is too large");
+}
 if(zip_HASH_BITS < 8 || zip_MAX_MATCH != 258)
+{
     alert("error: Code too clever");
+}
 var zip_DIST_BUFSIZE = zip_LIT_BUFSIZE;
 var zip_HASH_SIZE = 1 << zip_HASH_BITS;
 var zip_HASH_MASK = zip_HASH_SIZE - 1;
